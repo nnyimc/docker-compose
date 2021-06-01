@@ -4,5 +4,9 @@ services:
       build: .
       ports:
         - "5555:5555"
+      volumes:
+        - .:/code
+      environment:
+        FLASK_ENV: dev
     redis:
       image: "redis:alpine"
